@@ -1,27 +1,29 @@
-# WepApplication
+# Para ejecutar el proyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Una vez clonado el proyecto, desde la consola en el directorio del proyecto ejecutar el comando `npm i`
+Con este comando se instalarán las librerías y dependencias necesarias
 
-## Development server
+## Notas adicionales
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Se han instalado las librerías de Bootstrap, Jquery y Popperjs a partir del siguiente comando
+`npm i bootstrap jquery @popperjs/core`
 
-## Code scaffolding
+Una vez descargadas las librerías se han importado en el archivo angular.json (el orden de importación de los scripts es importante!)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    "styles": [
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "src/styles.scss"
+	],
+	"scripts": [
+		"node_modules/jquery/dist/jquery.min.js",
+		"node_modules/@popperjs/core/dist/umd/popper.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+	]
 
-## Build
+## Otras observaciones
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+El proyecto ha sido creado con las siguientes versiones
+    
+    Angular CLI: 10.0.8
+    Node: 10.16.1
+    Angular: 10.0.14
