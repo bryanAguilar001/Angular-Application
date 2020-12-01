@@ -20,6 +20,12 @@ Una vez descargadas las librerías se han importado en el archivo angular.json (
         "node_modules/bootstrap/dist/js/bootstrap.min.js"
 	]
 
+## Comandos útiles
+
+Creación de componentes sin archivo de test `ng g component <component-name> --skipTests=true`
+Creación de servicios sin archivo de test `ng g service <service-name> --skipTests=true`
+
+
 ## Otras observaciones
 
 El proyecto ha sido creado con las siguientes versiones
