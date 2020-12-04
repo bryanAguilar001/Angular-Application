@@ -1,67 +1,75 @@
-<section class="container mt-3 main-container">
+<section class="container">
+    <div class="row pt-5">
+        <div class="col-md-7 col-lg-9">
+            <h4>Farmacología</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, modi, nihil eaque illum labore iusto quisquam fugiat eligendi deleniti vitae recusandae tempore dolorem ab quam at ducimus aliquid error optio natus doloribus amet nobis.</p>
+        </div>
+        <div class="col-md-5 col-lg-3">
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container px-5">
-            <h3 class="d-sm-block d-none">&lt; Liv - Iniciar Sesión</h3>
-            <h5 class="d-block d-sm-none">&lt; Liv - Iniciar Sesión</h5>
+            <div class="media">
+                <div class="media-body text-center">
+                    <h5 class="pt-3 mb-0">Jorge Hurtado</h5>
+                    <p><small>Lorem ipsum dolor sit amet.</small></p>
+                </div>
+                <img class="rounded-circle align-self-center" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="60" alt="Generic placeholder image">
+            </div>
         </div>
     </div>
 
-    <div class="row justify-content-center justify-content-md-end login-container">
-        <div class="col-11 col-sm-8 col-md-6 col-lg-4 bg-dark text-white px-5 py-4 rounded">
-
-
-
-
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Usuario - correo electrónico</label>
-                    <input type="email" formControlName="username" required class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su nombre de usuario" [ngClass]="{ 'is-invalid': form.username.touched && form.username.errors }">
-
-
-                    <div *ngIf="form.username.touched && form.username.errors" class="invalid-feedback">
-                        <div *ngIf="form.username.errors.required">Porfavor ingrese su correo!</div>
-                        <div *ngIf="form.username.errors.email">Porfavor un correo válido!</div>
-                    </div>
-
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-4">
-                            <label for="exampleInputPassword1">Contraseña</label>
-                        </div>
-                        <div class="col-8">
-                            <small class="form-text text-right"><a href="">Olvidaste la contraseña?</a></small>
+    <div class="row p-4 px-lg-5">
+        <div class="col px-lg-5">
+            <owl-carousel-o [options]="customOptions" class="">
+                <ng-template carouselSlide>
+                    <!-- card -->
+                    <div class="card px-3 pt-3">
+                        <img class="card-img-top" src="/assets/img/image.jpg" alt="Card image cap">
+                        <div class="card-body text-right px-0">
+                            <h5 class="card-title text-left">Title</h5>
+                            <p class="card-text text-justify "><small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, eius quasi quisquam qui rerum praesentium sapiente obcaecati ut nulla nesciun</small></p>
+                            <a href="#"><small>Ver más ></small></a>
                         </div>
                     </div>
-
-                    <input type="password" formControlName="password" required class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Ingrese su contraseña" [ngClass]="{ 'is-invalid': form.password.touched && form.password.errors }">
-
-
-                    <div *ngIf="form.password.touched && form.password.errors" class="invalid-feedback">
-                        <div *ngIf="form.password.errors.required">Porfavor ingrese su contraseña!</div>
-                        <div *ngIf="form.password.errors.minlength">Al menos 6 caracteres!</div>
+                    <!-- card end-->
+                </ng-template>
+                <ng-template carouselSlide>
+                    <!-- card -->
+                    <div class="card px-3 pt-3">
+                        <img class="card-img-top" src="/assets/img/image.jpg" alt="Card image cap">
+                        <div class="card-body text-right px-0">
+                            <h5 class="card-title text-left">Title</h5>
+                            <p class="card-text text-justify "><small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, eius quasi quisquam qui rerum praesentium sapiente obcaecati ut nulla nesciun</small></p>
+                            <a href="#"><small>Ver más ></small></a>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <button type="submit" class="btn btn-block btn-outline-light">Registrarme</button>
+                    <!-- card end-->
+                </ng-template>
+                <ng-template carouselSlide>
+                    <!-- card -->
+                    <div class="card px-3 pt-3">
+                        <img class="card-img-top" src="/assets/img/image.jpg" alt="Card image cap">
+                        <div class="card-body text-right px-0">
+                            <h5 class="card-title text-left">Title</h5>
+                            <p class="card-text text-justify "><small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, eius quasi quisquam qui rerum praesentium sapiente obcaecati ut nulla nesciun</small></p>
+                            <a href="#"><small>Ver más ></small></a>
+                        </div>
                     </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
+                    <!-- card end-->
+                </ng-template>
+                <ng-template carouselSlide>
+                    <!-- card -->
+                    <div class="card px-3 pt-3">
+                        <img class="card-img-top" src="/assets/img/image.jpg" alt="Card image cap">
+                        <div class="card-body text-right px-0">
+                            <h5 class="card-title text-left">Title</h5>
+                            <p class="card-text text-justify "><small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, eius quasi quisquam qui rerum praesentium sapiente obcaecati ut nulla nesciun</small></p>
+                            <a href="#"><small>Ver más ></small></a>
+                        </div>
                     </div>
-                </div>
-                <div class="row pt-4">
-                    <div class="col">
-                        <small id="emailHelp" class="form-text text-justify">Al identificarse aceptas nuestras <a href="">Condiciones de uso</a>. Consulta nuestro <a href="">Aviso de privacidad</a> y nuestras <a href="">Aviso de Cookies</a> y <a href="">Aviso sobre publicidad</a> basada en los intereses del usuario</small>
-                    </div>
-                </div>
-            </form>
+                    <!-- card end-->
+                </ng-template>
 
 
-
-
-
+            </owl-carousel-o>
 
         </div>
     </div>

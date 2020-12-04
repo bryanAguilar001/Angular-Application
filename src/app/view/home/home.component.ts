@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { HttpClientService } from '../../services/http-client.service';
-import { User } from '../../models/user.model';
-import { Subscription } from 'rxjs/internal/Subscription';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -11,57 +8,33 @@ import { Subscription } from 'rxjs/internal/Subscription';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    private formBuilder: FormBuilder,
-    public httpService: HttpClientService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  /**
-   * Define login form
-  */
-  loginForm = this.formBuilder.group({
-    username: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-  });
-
-  /**
-   * Variable to sign out
-   * @type {Subscription}
-  */
-  private subscription: Subscription;
-
-  /**
-   * Getter for easy access to login form fields
-   * @return {FormControl} Acces to login form
-  */
-  get form() {
-    return this.loginForm.controls;
-  }
-
-  /**
-   * Submit login
-   * @return {void} Nothing
-  */
-  onSubmit() {
-
-    let user: User = {
-      email: this.form.username.value,
-      password: this.form.password.value
+  customOptions: OwlOptions = {
+    // mouseDrag: false,
+    // touchDrag: false,
+    // pullDrag: false,
+    dots: false,
+    margin: 35,
+    navText: ['', ''],
+    nav: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      480: {
+        items: 2,
+      },
+      768: {
+        items: 3
+      },
+      1200: {
+        items: 3
+      }
     }
-
-    console.log(user);
-
-    this.httpService.login(user);
-
-    // this.subscription = this.httpService.login(user).subscribe((response) => {
-    //   console.log(response.data);
-    //   // if (response.status == 200) {}
-    // }, (error) => {
-    //   console.log(error);
-    // });
   }
 
 }

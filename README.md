@@ -28,6 +28,8 @@ Creación de servicios sin archivo de test `ng g service <service-name> --skipTe
 
 ## Otras observaciones
 
+Para la creación del carrusel se ha hecho uso de la librería  [ngx-owl-carousel-o](https://www.npmjs.com/package/ngx-owl-carousel-o)
+
 El proyecto ha sido creado con las siguientes versiones
     
     Angular CLI: 10.0.8
