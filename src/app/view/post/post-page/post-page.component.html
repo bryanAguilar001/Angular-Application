@@ -1,0 +1,104 @@
+<section class="container bg-2 mt-5">
+    <div class="row  flex-column-reverse flex-md-row equalize px-4 py-5">
+        <div class="col-md-6">
+            <h3 class="mt-4 mt-md-0">Introducción</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi corrupti ea ipsa? Quos labore error optio, eaque libero soluta doloribus perspiciatis repellendus! Nulla voluptate veritatis, aliquid vitae laudantium vel.</p>
+            <div class="row">
+                <div class="col-sm-8 col-md-12 col-lg-7">
+                    <button type="button" class="btn btn-block btn-secondary">Pon a prueba tu conocimiento</button>
+                </div>
+            </div>
+            <div class="row mt-5 text-center">
+                <div class="col-3">
+                    <p class="text-uppercase mb-0">clases</p>
+                    <div class="line-separator"></div>
+                </div>
+                <div class="col-3">
+                    <p class="text-uppercase mb-0 cursor-pointer">Aportes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="img-fluid" src="/assets/img/image-2.jpg" width="100%" height="100px" alt="image">
+        </div>
+    </div>
+</section>
+<section class="container my-5">
+    <div class="row justify-content-between">
+        <div class="col-md-3 px-0 text-white">
+            <div class="bg p-3">
+                <p class="text-uppercase"><b>navegación</b></p>
+                <ul>
+                    <li>Conceptos básicos del dolor</li>
+                    <li>Mecanismos Fisiopatológicos</li>
+                    <li>Diseño Tisular</li>
+                    <li>Vías del Dolor</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h4 class="py-4">Conceptos básicos del dolor</h4>
+            <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores officia porro sint alias, veniam
+                blanditiis, unde expedita iure magni facilis nostrum amet corrupti saepe fugiat exercitationem nam
+                voluptatem eius cumque assumenda? Illum repellat est repudiandae! Dolorum, molestias, ratione deleniti
+                quo cumque natus magnam consequuntur eaque et, voluptates laudantium illo explicabo?</small>
+            <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ipsum minus debitis dolore. Vitae
+                natus quia reprehenderit numquam nobis. Soluta repellat officiis pariatur quas voluptas sunt repudiandae
+                facere ea. Ullam.</small>
+            <div class="row mt-5 text-center">
+                <div class="col-3">
+                    <p class="text-uppercase mb-0" [ngClass]="{'cursor-pointer': !video_section}" (click)="changeSection()">videos</p>
+                    <div *ngIf="video_section" class="line-separator"></div>
+                </div>
+                <div class="col-3">
+                    <p class="text-uppercase mb-0 cursor-pointer">imagenes</p>
+                </div>
+                <div class="col-3">
+                    <p class="text-uppercase mb-0" [ngClass]="{'cursor-pointer': !article_section}" (click)="changeSection()">articulos</p>
+                    <div *ngIf="article_section" class="line-separator"></div>
+                </div>
+            </div>
+            <div *ngIf="video_section" class="row mt-4">
+                <div class="col-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="article_section" class="row mt-4">
+                <div class="col-12 pl-5">
+
+                    <small>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque tenetur exercitationem
+                        assumenda culpa doloribus quos repudiandae veritatis corporis quaerat beatae?
+                    </small>
+
+                    <br><br>
+
+                    <small>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque tenetur exercitationem
+                        assumenda culpa doloribus quos repudiandae veritatis corporis quaerat beatae?
+                    </small>
+
+                    <br><br>
+
+                    <small>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque tenetur exercitationem
+                        assumenda culpa doloribus quos repudiandae veritatis corporis quaerat beatae?
+                    </small>
+
+                </div>
+            </div>
+            <h4 class="pt-5 pb-4">Mecanismos Fisiopatológicos</h4>
+            <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores officia porro sint alias, veniam
+                blanditiis, unde expedita iure magni facilis nostrum amet corrupti saepe fugiat exercitationem nam
+                voluptatem eius cumque assumenda? Illum repellat est repudiandae! Dolorum, molestias, ratione deleniti
+                quo cumque natus magnam consequuntur eaque et, voluptates laudantium illo explicabo?</small>
+            <div class="row justify-content-end mt-4">
+                <div class="col-sm-6 col-md-3">
+                    <button type="button" class="btn btn-block btn-primary">Siguiente clase ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
